@@ -20,10 +20,23 @@ function eventLoad() {
       const pathName = evt.target.getAttribute("route");
       historyRouterPush(pathName, historyAppDiv);
       const menu = document.querySelector(".menu");
+      const backBtn = document.querySelector(".back-btn");
+      const memoBtn = document.querySelector(".memo-btn");
+      const alarmBtn = document.querySelector(".alarm-create-btn");
       if (pathName !== "/") {
         menu.className += " none";
+        backBtn.classList.remove("none");
+        if (pathName == "/memo") {
+          memoBtn.classList.remove("none");
+          require("./js/memo.js");
+        } else {
+          alarmBtn.classList.remove("none");
+        }
       } else {
         menu.classList.remove("none");
+        backBtn.className += " none";
+        memoBtn.className += " none";
+        alarmBtn.className += " none";
       }
     });
   });
