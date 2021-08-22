@@ -1,0 +1,25 @@
+.picture_wrap {
+  width: 100%;
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+.picture_wrap img {
+  width: 150px;
+  height: 150px;
+}
+
+.selected-picture {
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.selected-picture img {
+  width: 100%;
+  height: 400px;
+}
+
+.active {
+  border: solid red;
+}

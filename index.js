@@ -31,6 +31,7 @@ function eventLoad() {
           require("./js/memo.js");
         } else {
           alarmBtn.classList.remove("none");
+          require("./js/picture.js");
         }
       } else {
         menu.classList.remove("none");
