@@ -6,8 +6,8 @@ require("./css/alram.css");
 require("./css/picture.css");
 
 // load js
-require("./js/home.js");
 
+const { home } = require("./js/home.js");
 const { picture } = require("./js/picture.js");
 const { alarm } = require("./js/alarm.js");
 const { memo } = require("./js/memo.js");
@@ -19,6 +19,8 @@ const { historyRouterPush, initialRoutes } = require("./router.js");
 const historyAppDiv = document.querySelector("#app");
 
 initialRoutes(historyAppDiv);
+
+home();
 
 window.onload = () => {
   const historyLinker = document.querySelectorAll("span.history");
