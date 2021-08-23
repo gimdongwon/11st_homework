@@ -24,3 +24,19 @@ webpack을 통해 spa 구조를 설정하였고 route에 맞는 hbs 페이지를
 1. 페이지 이동 후 새로고침 하면 페이지를 받지 못합니다. 다시 홈으로 가서 새로고침을 하고 해당 페이지에 다시가면 localStorage에 해당 작업 내용들이 저장되어 있습니다.
 
 ## 캡쳐
+
+### Home
+
+![home](https://raw.githubusercontent.com/gimdongwon/11st_homework/main/images/home.png)
+
+### Alarm
+
+![alarm](https://raw.githubusercontent.com/gimdongwon/11st_homework/main/images/alarm.png)
+
+### Memo
+
+![Memo](https://raw.githubusercontent.com/gimdongwon/11st_homework/main/images/memo.png)
+
+### Picture
+
+![Picture](https://raw.githubusercontent.com/gimdongwon/11st_homework/main/images/picture.png)
