@@ -1,8 +1,16 @@
 // load css
 require("./css/style.css");
+require("./css/home.css");
+require("./css/memo.css");
+require("./css/alram.css");
+require("./css/picture.css");
 
 // load js
 require("./js/home.js");
+
+const { picture } = require("./js/picture.js");
+const { alarm } = require("./js/alarm.js");
+const { memo } = require("./js/memo.js");
 
 // router setting
 const { historyRouterPush, initialRoutes } = require("./router.js");
@@ -12,7 +20,7 @@ const historyAppDiv = document.querySelector("#app");
 
 initialRoutes(historyAppDiv);
 
-function eventLoad() {
+window.onload = () => {
   const historyLinker = document.querySelectorAll("span.history");
 
   historyLinker.forEach((el) => {
@@ -28,13 +36,12 @@ function eventLoad() {
         backBtn.classList.remove("none");
         if (pathName == "/memo") {
           memoBtn.classList.remove("none");
-          require("./js/memo.js");
+          memo();
         } else if (pathName == "/alarm") {
           alarmBtn.classList.remove("none");
-          require("./js/alram.js");
+          alarm();
         } else {
-          alarmBtn.className += " none";
-          require("./js/picture.js");
+          picture();
         }
       } else {
         menu.classList.remove("none");
@@ -44,6 +51,4 @@ function eventLoad() {
       }
     });
   });
-}
-
-window.onload = () => eventLoad();
+};

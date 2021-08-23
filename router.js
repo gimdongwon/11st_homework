@@ -10,6 +10,8 @@ const Alarm = alarmTemplate();
 const Memo = memoTemplate();
 const Picture = pictureTemplate();
 
+// const { eventLoad } = require("./index.js");
+
 const routes = {
   "/": Home,
   "/alarm": Alarm,
@@ -32,7 +34,6 @@ function historyRouterPush(pathName, el) {
 // render
 function renderHTML(el, route) {
   el.innerHTML = route;
-  //   eventLoad();
 }
 
 module.exports = {
