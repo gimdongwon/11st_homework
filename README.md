@@ -11,6 +11,16 @@ webpack을 통해 spa 구조를 설정하였고 route에 맞는 hbs 페이지를
 3. npm start를 webpack서버를 실행 후 local server에 접속하신 후
 4. 개발한 기능들을 확인하면 됩니다.
 
+## 파일 구조
+
+![alarm](https://raw.githubusercontent.com/gimdongwon/11st_homework/main/images/file.png)
+
+webpack.config.js와 router.js 에서 spa관련된 설정을 한 후
+
+index.js에서 추가 설정과 최상단 index.js와 하단 css, js를 load를 하는 방식으로 개발하였습니다.
+
+index.html이 최상단 웹페이지 역할을 하고 handlebars를 통해 하위 페이지를 로드하였습니다.
+
 ## 아쉬운 점
 
 1. 앱이다 보니 css를 처음에 휴대폰 사이즈로 고정해서 개발하다보니 오히려 반응형에 익숙한 저에게 좀 더 난관이었습니다.
