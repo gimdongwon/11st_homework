@@ -1,0 +1,24 @@
+#alram-form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.alram-input {
+  width: 80%;
+}
+
+.alram-create-btn {
+  width: 20%;
+}
+
+.alramList {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  margin: 3%;
+}
+
+.alramDelete {
+  color: red;
+}

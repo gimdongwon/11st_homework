@@ -22,15 +22,18 @@ function eventLoad() {
       const menu = document.querySelector(".menu");
       const backBtn = document.querySelector(".back-btn");
       const memoBtn = document.querySelector(".memo-btn");
-      const alarmBtn = document.querySelector(".alarm-create-btn");
+      const alarmBtn = document.querySelector(".alarm-view-btn");
       if (pathName !== "/") {
         menu.className += " none";
         backBtn.classList.remove("none");
         if (pathName == "/memo") {
           memoBtn.classList.remove("none");
           require("./js/memo.js");
-        } else {
+        } else if (pathName == "/alarm") {
           alarmBtn.classList.remove("none");
+          require("./js/alram.js");
+        } else {
+          alarmBtn.className += " none";
           require("./js/picture.js");
         }
       } else {
