@@ -11,27 +11,24 @@ ul {
   justify-content: center;
 }
 
-#memo_content {
+#memo_content_input {
   width: 100%;
   height: 30px;
   border-radius: 5%;
 }
 
-.memo-create-btn {
-  display: none;
-}
-
 .memoList {
   background-color: #fff;
-  /* height: 30px; */
   text-align: center;
-  /* line-height: 30px; */
-  width: 100%;
+  word-break: break-word;
   text-overflow: ellipsis;
-  white-space: normal;
   overflow: hidden;
-  word-wrap: break-word;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
+}
+
+.selected {
+  border: solid red;
+  -webkit-line-clamp: inherit;
 }

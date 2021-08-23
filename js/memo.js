@@ -7,7 +7,7 @@ app.innerHTML = `
     <form class="memo_form" onsubmit="return false;">
       <label for="content"></label>
       <input
-        id="memo_content"
+        id="memo_content_input"
         type="text"
         placeholder="메모를 입력하세요."
         value=""
@@ -47,9 +47,37 @@ function createMemo() {
 
   // localStorage에 저장
   const memos = document.querySelectorAll(".memo_list");
-  localStorage.setItem("memos", JSON.stringify(memos[0].childNodes));
+  const localMemoItems = [];
+  for (let i = 0; i < memos[0].childNodes.length; i++) {
+    localMemoItems.push(memos[0].childNodes[i].innerText);
+  }
+  localStorage.setItem("memos", JSON.stringify(localMemoItems));
+
+  selectedMemo();
 }
 
+// 선택시 펼쳐지기
+function selectedMemo() {
+  const memoList = document.querySelectorAll(".memoList");
+  for (let i = 0; i < memoList.length; i++) {
+    memoList[i].addEventListener("click", function () {
+      for (let j = 0; j < memoList.length; j++) {
+        memoList[j].classList.remove("selected");
+      }
+      memoList[i].classList += " selected";
+    });
+  }
+}
+
+// localStorage 불러오기
 if (localStorage.getItem("memos")) {
-  console.log(JSON.parse(localStorage.getItem("memos")));
+  const localMemoItems = JSON.parse(localStorage.getItem("memos"));
+  for (let i = 0; i < localMemoItems.length; i++) {
+    const li = document.createElement("li");
+    li.className += "memoList";
+    const textNode = document.createTextNode(localMemoItems[i]);
+    li.appendChild(textNode);
+    document.querySelector(".memo_list").appendChild(li);
+  }
+  selectedMemo();
 }
